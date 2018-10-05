@@ -2,11 +2,11 @@
 devices:
   - hostname: router1
     profile: base
-    address: 11.0.0.0
+    address: 10.0.0.0
     netmask: 255.255.255.0
     wildcard: 0.0.0.255
   - hostname: router2
-    profile: test
+    profile: base
     address: 11.0.0.0
     netmask: 255.255.255.0
     wildcard: 0.0.0.255
