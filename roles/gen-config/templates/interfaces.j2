@@ -1,0 +1,24 @@
+!
+interface Loopback0
+ description Mgmt
+ ip address 10.213.255.254 255.255.255.255
+!
+interface GigabitEthernet0/0
+ description WAN
+ ip address {{ item.address | ipmath(2) }} {{ item.netmask }}
+ ip access-group DENY out
+ no ip redirects
+ no ip proxy-arp
+ ip nat outside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ description test
+ ip address {{ item.address | ipmath(6) }} {{ item.netmask }}
+ ip nat inside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
