@@ -4,4 +4,4 @@
   hosts: localhost
 
   roles:
-    - gen-config
+    - build-kit3
