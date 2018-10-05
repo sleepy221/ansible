@@ -1,0 +1,6 @@
+---
+device:
+  switch:
+    - name: switch
+  router:
+    - name: router
