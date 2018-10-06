@@ -1,4 +1,5 @@
 ---
-- name: Generate configuration files
-  template: src={{ item.profile }}.j2 dest=/tmp/{{ item.hostname }}.cfg
+- name: Generate configuration files for Kit1
+  template: src={{ item.hostname}}.j2 dest=/tmp/{{ item.hostname }}.cfg
   with_items: "{{ devices }}"
+

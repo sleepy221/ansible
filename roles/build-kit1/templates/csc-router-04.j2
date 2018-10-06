@@ -1,0 +1,21 @@
+!
+interface gi0/0
+ ip address {{ item.link_supernet | ipmath(10) }} {{ item.link_netmask }}
+ duplex auto
+ speed auto
+ no shutdown
+!
+!
+interface gi0/1
+ ip address {{ item.link_supernet | ipmath(14) }} {{ item.link_netmask }}
+ duplex auto
+ speed auto
+ no shutdown
+!
+!
+interface gi0/2
+ ip address {{ item.link_supernet | ipmath(17) }} {{ item.link_netmask }}
+ duplex auto
+ speed auto
+ no shutdown
+!

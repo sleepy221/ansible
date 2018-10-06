@@ -1,9 +1,10 @@
 !
 router eigrp 213
- network {{ item.address }} {{ item.wildcard }}
- network 10.213.50.0 0.0.0.255
- network 10.213.255.254 0.0.0.0
+{% for network in item.links %}
+ network {{ network.link_subnet }} {{ network.link_wildcard }}
+{% endfor %}}
  passive-interface default
- no passive-interface Tunnel1
- no passive-interface GigabitEthernet0/1
+{% for link in item.links%}
+ no passive-interface {{ link.link_port }}
+{% endfor %}
 !

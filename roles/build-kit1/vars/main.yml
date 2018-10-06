@@ -1,12 +1,18 @@
 ---
 devices:
-  - hostname: router1
-    profile: base
-    address: 10.0.0.0
-    netmask: 255.255.255.0
-    wildcard: 0.0.0.255
-  - hostname: router2
-    profile: base
-    address: 11.0.0.0
-    netmask: 255.255.255.0
-    wildcard: 0.0.0.255
+  - hostname: csc-router-01
+    link_supernet: 10.0.0.0
+    link_netmask: 255.255.255.252
+    link_wildcard: 0.0.0.3
+  - hostname: csc-router-02
+    link_supernet: 10.0.0.0
+    link_netmask: 255.255.255.252
+    link_wildcard: 0.0.0.3
+  - hostname: csc-router-03
+    link_supernet: 10.0.0.0
+    link_netmask: 255.255.255.252
+    link_wildcard: 0.0.0.3
+  - hostname: csc-router-04
+    link_supernet: 10.0.0.0
+    link_netmask: 255.255.255.252
+    link_wildcard: 0.0.0.3
