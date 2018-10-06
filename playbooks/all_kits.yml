@@ -1,0 +1,9 @@
+---
+- name: Apply build role
+  gather_facts: no
+  hosts: localhost
+
+  roles:
+    - build-kit1
+    - build-kit2
+    - build-kit3

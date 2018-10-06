@@ -9,6 +9,7 @@ devices:
       - link_interface: gi0/0
       - link_interface: gi0/1
       - link_interface: gi0/2
+    network: 10.0.0.0 0.0.0.255
   - hostname: csc-router-02
     kit: kit1
     link_supernet: 10.0.0.0
@@ -18,6 +19,7 @@ devices:
       - link_interface: gi0/0
       - link_interface: gi0/1
       - link_interface: gi0/2
+    network: 10.0.0.0 0.0.0.255
   - hostname: csc-router-03
     kit: kit1
     link_supernet: 10.0.0.0
@@ -27,6 +29,7 @@ devices:
       - link_interface: gi0/0
       - link_interface: gi0/1
       - link_interface: gi0/2
+    network: 10.0.0.0 0.0.0.255
   - hostname: csc-router-04
     kit: kit1
     link_supernet: 10.0.0.0
@@ -36,3 +39,4 @@ devices:
       - link_interface: gi0/0
       - link_interface: gi0/1
       - link_interface: gi0/2
+    network: 10.0.0.0 0.0.0.255
