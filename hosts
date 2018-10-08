@@ -7,6 +7,19 @@
 #   - Groups of hosts are delimited by [header] elements
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
-
+ansible_connection=local
 localhost
 csc-app-[01:04].csc.xipnet.xyz
+
+[routers]
+10.213.0.1
+
+[switches]
+10.213.100.1
+
+[network_devices]
+10.213.0.1
+10.213.100.1
+
+[network_devices:vars]
+device_type=cisco_ios

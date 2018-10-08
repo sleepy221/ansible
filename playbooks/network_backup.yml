@@ -1,0 +1,16 @@
+---
+- name: Save Configurations (IOS)
+  connection: local
+  gather_facts: True
+  hosts: network_devices
+  vars_files:
+    - cred.yml
+  
+  tasks:
+  - name: Configure Provider
+    set_fact:
+      provider:
+        username: "{{ username }}"
+        password: "{{ password }}"
+        host: "{{ inventory_hostname }}"
+  
