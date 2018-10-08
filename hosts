@@ -21,5 +21,9 @@ csc-app-[01:04].csc.xipnet.xyz
 10.213.0.1
 10.213.100.1
 
+[lab_devices]
+40.0.0.254
+40.0.0.253
+
 [network_devices:vars]
 device_type=cisco_ios

@@ -5,20 +5,3 @@
 - name: Generate configuration files for Kit1
   template: src={{ item.hostname}}_base.j2 dest=/tmp/{{ item.kit }}/{{ item.hostname }}.cfg
   with_items: "{{ devices }}"
-- name: Configure Provider
-  set_fact:
-    provider:
-      username: "{{ username }}"
-      password: "{{ password }}"
-      host: "{{ inventory_hostname }}"
-- name: Test reachability to 8.8.8.8 using default vrf
-  ios_ping:
-    dest: 8.8.8.8
-- name: Backup Config
-  ios_config:
-    backup: yes
-- name: check the running-config against master config
-  ios_config:
-    diff_against: intended
-    intended_config: "{{ lookup('file', '/etc/ansible/playbooks/master.cfg') }}"
-    provider: "{{ provider }}"

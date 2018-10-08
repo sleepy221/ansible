@@ -3,12 +3,5 @@
   gather_facts: no
   hosts: localhost
 
-- name: Save Configurations (IOS)
-  connection: local
-  gather_facts: False
-  hosts: routers 
-  vars_files:
-    - /etc/ansible/cred.yml
-
   roles:
     - build-kit1
