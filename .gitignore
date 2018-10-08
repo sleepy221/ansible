@@ -2,3 +2,4 @@
 .idea
 cred.yml
 playbooks/master.cfg
+playbooks/backup/
