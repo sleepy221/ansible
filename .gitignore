@@ -1,3 +1,4 @@
 .idea/
 .idea
 cred.yml
+playbooks/master.cfg

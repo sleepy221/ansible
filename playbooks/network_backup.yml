@@ -1,10 +1,10 @@
 ---
 - name: Save Configurations (IOS)
   connection: local
-  gather_facts: True
-  hosts: network_devices
+  gather_facts: False
+  hosts: routers 
   vars_files:
-    - cred.yml
+    - /etc/ansible/cred.yml
   
   tasks:
   - name: Configure Provider
@@ -13,4 +13,15 @@
         username: "{{ username }}"
         password: "{{ password }}"
         host: "{{ inventory_hostname }}"
-  
+
+  - name: Test reachability to 8.8.8.8 using default vrf
+    ios_ping:
+      dest: 8.8.8.8
+  - name: Backup Config
+    ios_config:
+      backup: yes
+  - name: check the running-config against master config
+    ios_config:
+      diff_against: intended
+      intended_config: "{{ lookup('file', 'master.cfg') }}"
+      provider: "{{ provider }}"
