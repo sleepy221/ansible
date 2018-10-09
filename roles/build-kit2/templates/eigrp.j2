@@ -1,9 +1,0 @@
-!
-router eigrp 213
- network {{ item.address }} {{ item.wildcard }}
- network 10.213.50.0 0.0.0.255
- network 10.213.255.254 0.0.0.0
- passive-interface default
- no passive-interface Tunnel1
- no passive-interface GigabitEthernet0/1
-!

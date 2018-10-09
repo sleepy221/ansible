@@ -1,7 +1,0 @@
----
-- name: Apply build role
-  gather_facts: no
-  hosts: localhost
-
-  roles:
-    - build-kit2

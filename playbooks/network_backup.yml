@@ -14,3 +14,20 @@
     ios_config:
       diff_against: intended
       intended_config: "{{ lookup('file', 'master.cfg') }}"
+  - name: apply new lines
+    ios_config:
+      parents: line con 0
+      commands:
+        - exec-timeout 10 0
+        - exec-banner
+      match: exact
+      replace: block
+      before:
+        - line con 0
+        - no exec-timeout
+      after:
+        - line con 0
+      save_when: modified
+  - name: Push Config
+    ios_config:
+      src: /etc/ansible/playbooks/test.cfg
