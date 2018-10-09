@@ -1,0 +1,7 @@
+---
+- name: Apply build role
+  gather_facts: yes
+  hosts: lab_router
+
+  roles:
+    - lab-router
