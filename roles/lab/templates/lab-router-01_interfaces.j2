@@ -1,0 +1,13 @@
+!
+!
+!
+interface {{ item.trunk_port }}
+ no shutdown
+!
+{% for vlans in item.sub_int %}
+interface {{ item.trunk_port }}.{{ vlans.vlan }}
+ encapsulation dot1q {{ vlans.vlan }}
+{% endfor %}
+!
+
+

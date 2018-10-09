@@ -1,0 +1,12 @@
+---
+- name: Create directory to store files
+  file: path=/tmp/{{ item.kit }} state=directory
+  with_items: "{{ devices }}"
+- name: Generate configuration files for lab router and switch
+  template: src={{ item.hostname }}_base.j2 dest=/tmp/{{ item.kit }}/{{ item.hostname }}.cfg
+  with_items: "{{ devices }}"
+- name: Push Configs
+  ios_config:
+    src: /tmp/{{ item.kit }}/{{ item.hostname }}.cfg
+    save_when: modified
+  with_items: "{{ devices }}"

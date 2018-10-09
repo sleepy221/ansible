@@ -1,0 +1,40 @@
+---
+devices:
+  - hostname: lab-router-01
+    kit: lab
+    vlan_netmask: 255.255.255.240
+    vlan_wildcard: 0.0.0.15
+    trunk_port: gi0/2
+    vlan_networks:
+      - vlan_network: 20.0.0.0
+      - vlan_network: 20.0.0.16
+      - vlan_network: 20.0.0.32
+    data_network: 20.0.0.0
+    voice_network: 20.0.0.16
+    mgmt_network: 20.0.0.32
+    sub_int:
+      - vlan: 10
+      - vlan: 200
+      - vlan: 1000
+  
+  - hostname: lab-switch-01
+    kit: lab
+    link_netmask: 255.255.255.240
+    uplink: gi0/0
+    trunk_port: gi0/0
+    mgmt_network: 20.0.0.32
+    links:
+      - link_interface: gi0/1
+      - link_interface: gi0/2
+      - link_interface: gi0/3
+      - link_interface: gi1/0
+      - link_interface: gi1/1
+      - link_interface: gi1/2
+      - link_interface: gi1/3
+    access_vlan: 10
+    voice_vlan: 200
+    mgmt_vlan: 1000
+    sub_int:
+      - vlan: 10
+      - vlan: 200
+      - vlan: 1000
