@@ -1,7 +1,7 @@
 ---
 - name: Save Configurations (IOS)
   gather_facts: True
-  hosts: routers 
+  hosts: lab_devices 
   
   tasks:
   - name: Test reachability to 10.213.100.1 using default vrf

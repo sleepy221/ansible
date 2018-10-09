@@ -27,6 +27,9 @@ csc-app-[01:04].csc.xipnet.xyz
 
 [lab_devices:vars]
 device_type=cisco_ios
+ansible_connection = network_cli
+ansible_user = root
+ansible_network_os = ios
 
 [network_devices:vars]
 device_type=cisco_ios
