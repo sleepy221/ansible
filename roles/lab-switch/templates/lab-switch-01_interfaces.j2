@@ -19,7 +19,7 @@
  no shutdown
 !
 int vlan {{ item.mgmt_vlan }}
-ip add {{ item.mgmt_network | ipmath(13) }}
+ip add {{ item.mgmt_network | ipmath(13) }} {{ item.link_netmask }}
 !
 {% for vlan in item.vlans %}
 vlan {{ vlan.vlan }}

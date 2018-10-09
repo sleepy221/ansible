@@ -1,8 +1,11 @@
 ---
-- name: Apply build role
+- name: Apply build role - Router
   gather_facts: yes
-  hosts: lab_devices
-
+  hosts: lab_router
   roles:
     - lab-router
+- name: Apply build role - Switch
+  gather_facts: yes
+  hosts: lab_switch
+  roles:
     - lab-switch
