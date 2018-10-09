@@ -21,11 +21,15 @@ csc-app-[01:04].csc.xipnet.xyz
 10.213.0.1
 10.213.100.1
 
+[lab_switch]
+20.0.0.45
+[lab_router]
+20.0.0.46
 [lab_devices]
 20.0.0.46
 20.0.0.45
 
-[lab_devices:vars]
+[all:vars]
 device_type=cisco_ios
 ansible_connection = network_cli
 ansible_user = root

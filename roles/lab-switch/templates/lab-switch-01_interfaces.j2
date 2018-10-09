@@ -1,0 +1,37 @@
+!
+!
+!
+{% for interface in item.links %}
+ interface {{ interface.link_interface }}
+ switchport
+ switchport mode access
+ switchport access vlan {{ item.access_vlan }}
+ switchport voice vlan {{ item.voice_vlan }}
+ desc Access done by Ansible
+ no shutdown
+!
+{% endfor %}
+!
+ interface {{ item.uplink }}
+ switchport
+ switchport mode trunk
+ desc Trunk done by Ansible
+ no shutdown
+!
+int vlan {{ item.mgmt_vlan }}
+ip add {{ item.mgmt_network | ipmath(13) }}
+!
+{% for vlan in item.vlans %}
+vlan {{ vlan.vlan }}
+{% if vlan.vlan == 10 %}
+name DATA
+{% else %}
+{% if vlan.vlan == 200 %}
+name VOICE
+{% else %}
+name MANAGEMENT
+{% endif %}
+{% endif %}
+{% endfor %}
+!
+!

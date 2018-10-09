@@ -5,8 +5,3 @@
 - name: Generate configuration files for lab router and switch
   template: src={{ item.hostname }}_base.j2 dest=/tmp/{{ item.kit }}/{{ item.hostname }}.cfg
   with_items: "{{ devices }}"
-- name: Push Config to Router
-  ios_config:
-    src: /tmp/{{ item.kit }}/{{ item.hostname }}.cfg
-    save_when: modified
-  with_items: "{{ devices }}"
