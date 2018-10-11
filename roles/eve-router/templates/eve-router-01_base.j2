@@ -1,4 +1,5 @@
 hostname {{ item.hostname }}
-{% include "lab-switch-01_interfaces.j2" %}
+!
+{% include "eve-router-01_interfaces.j2" %}
 {% include "access-lists.j2" %}
 {% include "line.j2" %}

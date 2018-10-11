@@ -1,7 +1,7 @@
 ---
 router_vars:
-  - hostname: lab-router-01
-    kit: lab
+  - hostname: eve-router-01
+    kit: eve
     vlan_netmask: 255.255.255.240
     vlan_wildcard: 0.0.0.15
     trunk_port: gi0/2
