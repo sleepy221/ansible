@@ -1,11 +1,11 @@
 ---
 - name: Apply build role - Router
   gather_facts: yes
-  hosts: lab_router
+  hosts: eve_router
   roles:
-    - lab-router
+    - eve-router
 - name: Apply build role - Switch
   gather_facts: yes
-  hosts: lab_switch
+  hosts: eve_switch
   roles:
-    - lab-switch
+    - eve-switch

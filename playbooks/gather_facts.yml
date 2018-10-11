@@ -1,7 +1,7 @@
 ---
 - name: Save Configurations (IOS)
   gather_facts: True
-  hosts: lab_router
+  hosts: eve_switch
   
   tasks:
     - ios_facts:

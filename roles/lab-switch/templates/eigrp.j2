@@ -1,8 +1,0 @@
-!
-router eigrp 213
- network {{ item.network }}
- passive-interface default
-{% for interface in item.links %}
- no passive-interface {{ interface.link_interface }}
-{% endfor %}
-!

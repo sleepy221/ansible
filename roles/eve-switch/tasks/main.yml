@@ -5,8 +5,8 @@
 - name: Generate configuration files for lab switch
   template: src={{ item.hostname }}_base.j2 dest=/tmp/{{ item.kit }}/{{ item.hostname }}.cfg
   with_items: "{{ switch_vars }}"
-- name: Push Configs
-  ios_config:
-    src: /tmp/{{ item.kit }}/{{ item.hostname }}.cfg
-    save_when: modified
-  with_items: "{{ switch_vars }}"
+#- name: Push Configs
+#  ios_config:
+#    src: /tmp/{{ item.kit }}/{{ item.hostname }}.cfg
+#    save_when: modified
+#  with_items: "{{ switch_vars }}"

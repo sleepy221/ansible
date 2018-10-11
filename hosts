@@ -1,33 +1,22 @@
-# This is the default ansible 'hosts' file.
-#
-# It should live in /etc/ansible/hosts
-#
-#   - Comments begin with the '#' character
-#   - Blank lines are ignored
-#   - Groups of hosts are delimited by [header] elements
-#   - You can enter hostnames or ip addresses
-#   - A hostname/ip can be a member of multiple groups
-ansible_connection=local
-localhost
-csc-app-[01:04].csc.xipnet.xyz
-
-[routers]
-10.213.0.1
-
-[switches]
-10.213.100.1
-
-[network_devices]
+[home_devices]
 10.213.0.1
 10.213.100.1
 
-[lab_switch]
-20.0.0.45
-[lab_router]
+[home_router]
+10.213.0.1
+
+[home_switch]
+10.213.100.1
+
+[eve_devices]
 20.0.0.46
-[lab_devices]
-20.0.0.46
+
 20.0.0.45
+[eve_switch]
+20.0.0.45
+
+[eve_router]
+20.0.0.46
 
 [all:vars]
 device_type=cisco_ios
@@ -35,8 +24,3 @@ ansible_connection = network_cli
 ansible_user = root
 ansible_network_os = ios
 
-[network_devices:vars]
-device_type=cisco_ios
-ansible_network_os = ios
-ansible_connection = network_cli
-ansible_user = root

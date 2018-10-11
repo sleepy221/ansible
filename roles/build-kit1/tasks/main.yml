@@ -1,7 +1,0 @@
----
-- name: Create directory to store files
-  file: path=/tmp/{{ item.kit }} state=directory
-  with_items: "{{ devices }}"
-- name: Generate configuration files for Kit1
-  template: src={{ item.hostname}}_base.j2 dest=/tmp/{{ item.kit }}/{{ item.hostname }}.cfg
-  with_items: "{{ devices }}"
