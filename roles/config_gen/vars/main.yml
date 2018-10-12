@@ -1,0 +1,18 @@
+---
+router_vars:
+  - hostname: eve-router-01
+    kit: eve
+    vlan_netmask: 255.255.255.240
+    vlan_wildcard: 0.0.0.15
+    trunk_port: gi0/2
+    vlan_networks:
+      - vlan_network: 20.0.0.0
+      - vlan_network: 20.0.0.16
+      - vlan_network: 20.0.0.32
+    data_network: 20.0.0.0
+    voice_network: 20.0.0.16
+    mgmt_network: 20.0.0.32
+    sub_int:
+      - vlan: 10
+      - vlan: 200
+      - vlan: 1000

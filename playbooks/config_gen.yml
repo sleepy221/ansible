@@ -1,0 +1,6 @@
+---
+- name: Apply build role - Generate Configs
+  gather_facts: no
+  hosts: eve_router
+  roles:
+    - config_gen

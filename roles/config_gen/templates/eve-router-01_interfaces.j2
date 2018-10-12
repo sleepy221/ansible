@@ -1,0 +1,23 @@
+!
+!
+!
+interface {{ item.trunk_port }}
+ no shutdown
+!
+{% for vlans in item.sub_int %}
+interface {{ item.trunk_port }}.{{ vlans.vlan }}
+ encapsulation dot1q {{ vlans.vlan }}
+{% if vlans.vlan == 10 %}
+ ip address {{ item.data_network | ipmath(14) }} {{ item.vlan_netmask }}
+ desc DATA
+{% else %}
+{% if vlans.vlan == 200 %}
+ ip address {{ item.voice_network | ipmath(14) }} {{ item.vlan_netmask }}
+ desc VOICE
+{% else %}
+ ip address {{ item.mgmt_network | ipmath(14) }} {{ item.vlan_netmask }}
+ desc MANAGEMENT
+{% endif %}
+{% endif %}
+{% endfor %}
+!
