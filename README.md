@@ -26,7 +26,7 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 3. ```mkdir /etc/ansible/playbooks && mkdir /etc/ansible/roles```
 4. ```cp -r roles/* /etc/ansible/roles && cp -r playbooks/* /etc/ansible/playbooks```
 
-## Step2: Run test build
+## Step 2: Run test build
 1. ```ansible-playbook /etc/ansible/playbooks/eve-devices.yml```
 Files will be placed in /tmp/eve/
 
