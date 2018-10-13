@@ -14,7 +14,7 @@ Install any missing pip modules listed below:
 - jinja2
 - PyYAML
 
-## Step 1: Clone repo to local machine
+## Step 1: Clone repo to local folder no int ```/etc/ansible```
 ```git clone https://github.com/castironclay/ansible.git```
 
 ## Step 2: Modify hosts file to match local IPs
@@ -36,6 +36,11 @@ ansible_connection = network_cli
 ansible_user = root
 ansible_network_os = ios                    
 ```
+### Note: 
+If you will not be pushing the configurations out to any devices you will not need to modify the default Ansible hosts file
+
+## Step 3: 
+
 ## Built With
 * [PyCharm Professional](https://www.jetbrains.com/pycharm/) - IDE Used
 * [Ansible](https://www.ansible.com/) - Automation Framework
