@@ -9,14 +9,14 @@
 10.213.100.1
 
 [eve_devices]
-20.0.0.46
+10.0.0.46
+10.0.0.45
 
-20.0.0.45
 [eve_switch]
-20.0.0.45
+10.0.0.45
 
 [eve_router]
-20.0.0.46
+10.0.0.46
 
 [all:vars]
 device_type=cisco_ios

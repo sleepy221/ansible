@@ -5,7 +5,7 @@ switch_vars:
     link_netmask: 255.255.255.240
     uplink: gi0/0
     trunk_port: gi0/0
-    mgmt_network: 20.0.0.32
+    mgmt_network: 10.0.0.32
     links:
       - link_interface: gi0/1
       - link_interface: gi0/2
