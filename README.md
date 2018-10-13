@@ -13,12 +13,12 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 - ```sudo apt-add-repository --yes --update ppa:ansible/ansible```
 - ```sudo apt-get install ansible```
 
-2. Install PIP and any missing pip modules listed below:
-- PIP v18 used in this build
-- ipaddr
-- ipaddress
-- jinja2
-- PyYAML
+2. Install PIP and PIP modules below:
+- ```sudo apt-get install python-pip```
+- ```pip install ipaddr```
+- ```pip install ipaddress```
+- ```pip install jinja2```
+- ```pip install PyYAML```
 
 ## Step 1: Clone repo to local machine and copy files to appropriate directory
 1. ```git clone https://github.com/castironclay/ansible.git```
@@ -26,12 +26,21 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 3. ```mkdir /etc/ansible/playbooks && mkdir /etc/ansible/roles```
 4. ```cp -r roles/* /etc/ansible/roles && cp -r playbooks/* /etc/ansible/playbooks```
 
+## Step2: Run test build
+1. ```ansible-playbook /etc/ansible/playbooks/eve-devices.yml```
+Files will be placed in /tmp/eve/
 
-## Built With
+## Versioning
+
+I use [SemVer](http://semver.org/) for versioning
+
+## All Built With
+
 * [PyCharm Professional](https://www.jetbrains.com/pycharm/) - IDE Used
 * [Ansible](https://www.ansible.com/) - Automation Framework
 * [EVE](http://www.eve-ng.net/) - Network Lab
 * [PIP](https://pypi.org/project/pip/) - Python PIP v18.1
 
 ## Authors
+
 - Clay Coppage
