@@ -28,7 +28,16 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 
 ## Step 2: Run test build
 1. ```ansible-playbook /etc/ansible/playbooks/eve-devices.yml```
-Files will be placed in /tmp/eve/
+- Files will be placed in /tmp/eve/
+
+## Step 3: Modify files to meet your needs
+This repo currently is being tested by build a config for a router and a config for a switch. You can modify the vars and template files to meet your needs
+1. Router files
+- ```/etc/ansible/roles/eve-router/templates```
+- ```/etc/ansible/roles/eve-router/vars```
+2. Switch files
+- ```/etc/ansible/roles/eve-switch/templates```
+- ```/etc/ansible/roles/eve-switch/vars```
 
 ## Versioning
 
