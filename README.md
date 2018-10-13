@@ -13,3 +13,33 @@ Install any missing pip modules listed below:
 - ipaddress
 - jinja2
 - PyYAML
+
+## Step 1: Clone repo to local machine
+```git clone https://github.com/castironclay/ansible.git```
+
+## Step 2: Modify hosts file to match local IPs
+Current hosts file
+```
+[eve_devices]
+10.0.0.46
+10.0.0.45
+
+[eve_switch]
+10.0.0.45
+
+[eve_router]
+10.0.0.46
+
+[all:vars]
+device_type=cisco_ios
+ansible_connection = network_cli
+ansible_user = root
+ansible_network_os = ios                    
+```
+## Built With
+* [PyCharm Professional](https://www.jetbrains.com/pycharm/) - IDE Used
+* [Ansible](https://www.ansible.com/) - Automation Framework
+* [EVE](http://www.eve-ng.net/) - Network Lab
+
+## Authors
+- Clay Coppage
