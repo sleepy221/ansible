@@ -7,4 +7,4 @@
     - ios_facts:
         gather_subset: all
       register: ios_facts_out 
-    - copy: content="{{ ios_facts_out | to_nice_json }}" dest="/tmp/test.json"
+    - copy: content="{{ ios_facts_out | to_nice_json }}" dest="/tmp/{{ansible_net_hostname}}.json"
