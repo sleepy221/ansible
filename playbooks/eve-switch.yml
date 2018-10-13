@@ -1,7 +1,7 @@
 ---
 - name: Apply build role
   gather_facts: no
-  hosts: eve-switch 
+  hosts: localhost
 
   roles:
     - eve-switch

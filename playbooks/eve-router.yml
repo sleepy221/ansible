@@ -1,7 +1,7 @@
 ---
 - name: Apply build role
   gather_facts: no
-  hosts: eve_router
+  hosts: localhost
 
   roles:
     - eve-router

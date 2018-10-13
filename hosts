@@ -1,13 +1,3 @@
-[home_devices]
-10.213.0.1
-10.213.100.1
-
-[home_router]
-10.213.0.1
-
-[home_switch]
-10.213.100.1
-
 [eve_devices]
 10.0.0.46
 10.0.0.45
@@ -23,4 +13,3 @@ device_type=cisco_ios
 ansible_connection = network_cli
 ansible_user = root
 ansible_network_os = ios
-
