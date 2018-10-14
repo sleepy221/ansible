@@ -9,4 +9,4 @@
   - ios_facts:
       gather_subset: "!config"
     register: ios_facts_out 
-  - copy: content="{{ ios_facts_out | to_nice_json }}" dest="backup/{{ ansible_host }}.json"
+  - copy: content="{{ ios_facts_out | to_nice_json }}" dest="backup/{{ ansible_net_hostname }}.json"

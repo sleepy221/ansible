@@ -1,12 +1,12 @@
 [eve_devices]
-10.0.0.46
-10.0.0.45
+eve-router-01	ansible_host=10.0.0.46
+eve-switch-01	ansible_host=10.0.0.45
 
 [eve_switch]
-10.0.0.45
+eve-switch-01	ansible_host=10.0.0.45
 
 [eve_router]
-10.0.0.46
+eve-router-01	ansible_host=10.0.0.46
 
 [all:vars]
 device_type=cisco_ios
