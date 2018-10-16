@@ -48,4 +48,5 @@ I use [SemVer](http://semver.org/) for versioning
 
 ## Authors
 
-- Clay Coppage
+- Clay C
+- Tony P
