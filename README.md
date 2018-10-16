@@ -13,18 +13,15 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 - ```sudo apt-add-repository --yes --update ppa:ansible/ansible```
 - ```sudo apt-get install ansible```
 
-2. Install PIP and PIP modules below:
+2. Install PIP below:
 - ```sudo apt-get install python-pip```
-- ```pip install ipaddr```
-- ```pip install ipaddress```
-- ```pip install jinja2```
-- ```pip install PyYAML```
 
-## Step 1: Clone repo to local machine and copy files to appropriate directory
-1. ```git clone https://github.com/castironclay/ansible.git```
-2. ```cd ansible```
-3. ```mkdir /etc/ansible/playbooks && mkdir /etc/ansible/roles```
-4. ```cp -r roles/* /etc/ansible/roles && cp -r playbooks/* /etc/ansible/playbooks```
+## Step 1: Clone repo to local machine and copy files to appropriate directory, install pip requirements
+1. `git clone https://github.com/castironclay/ansible.git`
+2. `cd ansible`
+3. `mkdir /etc/ansible/playbooks && mkdir /etc/ansible/roles`
+4. `cp -r roles/* /etc/ansible/roles && cp -r playbooks/* /etc/ansible/playbooks`
+5. `pip install -r requirements.txt`
 
 ## Step 2: Run test build
 1. ```ansible-playbook /etc/ansible/playbooks/eve-devices.yml```
