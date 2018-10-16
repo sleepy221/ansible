@@ -19,22 +19,21 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 ## Step 1: Clone repo to local machine and copy files to appropriate directory, install pip requirements
 1. `git clone https://github.com/castironclay/ansible.git`
 2. `cd ansible`
-3. `mkdir /etc/ansible/playbooks && mkdir /etc/ansible/roles`
-4. `cp -r roles/* /etc/ansible/roles && cp -r playbooks/* /etc/ansible/playbooks`
-5. `pip install -r requirements.txt`
+4. `pip install -r requirements.txt`
 
 ## Step 2: Run test build
-1. ```ansible-playbook /etc/ansible/playbooks/eve-devices.yml```
+
+1. from the location of the playbook, run `ansible-playbook playbooks/eve-devices.yml`
 - Files will be placed in /tmp/eve/
 
 ## Step 3: Modify files to meet your needs
 This repo currently is being tested by build a config for a router and a config for a switch. You can modify the vars and template files to meet your needs
 1. Router files
-- ```/etc/ansible/roles/eve-router/templates```
-- ```/etc/ansible/roles/eve-router/vars```
+- `roles/eve-router/templates`
+- `roles/eve-router/vars`
 2. Switch files
-- ```/etc/ansible/roles/eve-switch/templates```
-- ```/etc/ansible/roles/eve-switch/vars```
+- `roles/eve-switch/templates`
+- `roles/eve-switch/vars`
 
 ## Versioning
 
