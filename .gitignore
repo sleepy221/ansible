@@ -1,6 +1,7 @@
 .idea/
 .idea
 cred.yml
+playbooks/creds.yml
 playbooks/master.cfg
 playbooks/backup/
 roles/build-kit1/backup/

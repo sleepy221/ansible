@@ -1,0 +1,19 @@
+---
+- name: Gather Facts
+  gather_facts: True
+  hosts: eve_devices
+  vars_files:
+    - creds.yml
+  
+  tasks:
+  - name: Configure Provider
+    set_fact:
+      provider:
+        username: "{{ username }}"
+        password: "{{ password }}"
+        host: "{{ inventory_hostname }}"
+
+  - name: Backup Config
+    ios_config:
+      provider: "{{ provider }}"
+      backup: yes
