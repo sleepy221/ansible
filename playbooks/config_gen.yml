@@ -1,6 +1,0 @@
----
-- name: Apply build role - Generate Configs
-  gather_facts: no
-  hosts: localhost
-  roles:
-    - config_gen
