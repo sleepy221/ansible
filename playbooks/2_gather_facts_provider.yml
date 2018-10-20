@@ -17,3 +17,11 @@
     ios_config:
       provider: "{{ provider }}"
       backup: yes
+
+  - name: Gather Facts
+    ios_facts:
+      gather_subset: "!config"
+    register: ios_facts_out
+    
+  - name: Copy Facts
+    copy: content="{{ ios_facts_out | to_nice_json }}" dest="backup/{{ ansible_net_hostname }}.json"
