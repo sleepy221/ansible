@@ -6,3 +6,4 @@ playbooks/master.cfg
 playbooks/backup/
 roles/build-kit1/backup/
 hosts
+playbooks/live_hosts.txt
