@@ -31,7 +31,7 @@ for i in network.hosts():
 f.close()
 
 # Run ansible playbook targetting newly created file
-os.system("ansible-playbook -i live_hosts.txt /etc/ansible/playbooks/3_gather_live_facts.yml --ask-vault-pass")
+os.system("ansible-playbook -i live_hosts.txt 3_gather_live_facts.yml --ask-vault-pass")
 
 end = time.time()
 print(end -start, "seconds")
