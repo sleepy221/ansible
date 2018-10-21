@@ -70,7 +70,8 @@ If you are using username and password for authentication you'll want to configu
       provider: "{{ provider }}" **#Use your credentials to complete task**
       backup: yes
 ```
-
+6. To run a playbook containing a vault file remember to include `--ask-vault-pass` at the end of the command to be prompted for your password.
+- `ansible-playbook myplaybook.yml --ask-vault-pass`
 
 ## Scan new IP range and gather facts
 - `playbooks/ping_sweep.py`
